@@ -17430,11 +17430,15 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 #switcher{
 	display: none !important;
 }
-
+.flexslider{
+	height: 100%;
+	aspect-ratio: 16/9;
+	width: 100%;
+}
 .flexslider video{
 	width: 100%;
 	height: auto;
-	/* max-height: calc(100vh - 120px); */
+	aspect-ratio: 16/9;
 	object-fit: cover;
 }
 
