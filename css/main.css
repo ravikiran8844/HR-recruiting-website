@@ -17437,7 +17437,7 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 }
 .flexslider video{
 	width: 100%;
-	height: auto;
+	height: 100%;
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }
@@ -17519,4 +17519,27 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 	white-space: nowrap;
 
 }
+.home-about-us-section{
+	background-color: #F5F5F5;
+}
+.home-about-us-section .card-header a {
+	background-color: transparent !important;
+	color: #000 !important;
+	box-shadow: none;
+}
 
+.home-about-us-section .info-card{
+	border: none;
+	padding: 32px 0px 20px;
+}
+.home-about-us-section [role="tablist"] .card-header a.collapsed:hover{
+	color: #000;
+	background-color: transparent;
+}
+
+.home-about-us-section [role="tablist"] .card-header a{
+	padding: 10px 0px;
+}
+.home-about-us-section [data-toggle="collapse"] {
+	margin-top: 0px
+}
