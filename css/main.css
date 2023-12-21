@@ -17453,7 +17453,8 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 .home-custom-section1_grid-items{
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 20px;
+	row-gap: 30px;
+	column-gap: 20px;
 }
 .home-custom-section1_grid-item_logo-container{
 	width: 90px;
@@ -17474,9 +17475,12 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 	border: none;
 	box-shadow: 0 0 2px 2px #f7f7f7;
 	height: 100%;
+	width: 100%;
 
 }
-
+.home-custom-section1_grid-item .card-body{
+	padding: 15px 10px;
+}
 
 .home-custom-section1_grid-item:hover{
 	background-color: #fff;
