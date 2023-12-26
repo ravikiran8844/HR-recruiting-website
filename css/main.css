@@ -17547,3 +17547,12 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 .home-about-us-section [data-toggle="collapse"] {
 	margin-top: 0px
 }
+
+
+
+.home-custom-section1_grid-item .card-body{
+	padding: 15px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
