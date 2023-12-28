@@ -45,4 +45,38 @@
 
 
 
-  
+.open-positions_wrapper{
+    background-color: #F2F2F2;
+}
+
+.filter-multi-select .form-control{
+    border: 1px solid #cecece;
+    background: #fff !important;
+    border-radius: 5px;
+    height: 40px !important;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.custom-btn,.custom-btn:hover{
+
+    background: #ffda30;
+    color: #000;
+    margin: auto 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+    .open-role-card_details{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: right;
+    }
+    
+
