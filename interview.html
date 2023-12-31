@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Open Positions</title>
+    <title>Interview</title>
 
     <meta name="description" content="Some description for the page" />
     <!-- Favicon icon -->
@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link href="css/custom-styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/filter_multi_select.css">
 
 </head>
 
@@ -473,296 +472,310 @@
 
 
 
-         
 
 
 
 
-            <main class="open-positions_wrapper">
+
+            <main>
                 <section>
                     <div class="container py-5">
-                        <div class="row mb-5">
-                            <div class="col-12 text-center">
-                                <div class="h2">
-                                    4 Open Positions at Uplers & Mavlers
-                                </div>
-                                <div>
-                                    *Mavlers is a sister brand of Uplers, focused on digital marketing outsourcing services.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <form action="">
-                            <div class="row mb-5">
-
-                                <div class="col-12 col-lg-5 mb-3 mb-lg-0">
-                                    <select id="select1" multiple name="category" >
-                                    <option value="js">JavaScript</option>
-                                    <option value="html">HTML</option>
-                                    <option value="css">CSS</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-12 col-lg-5 mb-3 mb-lg-0">
-                                    <select id="select2" multiple name="work-type">
-                                        <option value="fulltime">Fulltime</option>
-                                        <option value="parttime">Parttime</option>
-                                    </select>
-                                </div>
-
-
-                                <div class="col-12 col-lg-2 mb-3 mb-lg-0">
-                                <button class="custom-btn">search</button>
-                                </div>
-
-                            </div>
-                        </form>
-
-
-
                         <div class="row">
-                            <div class="col-12 mb-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-2">L&D</div>
-                                            <div>1 Open role (1 Opening)
-                                            </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class=" col-12 col-md-8">
-                                                <h4 class="mb-2">Manager L&D</h4>
-                                                <div class="mb-2">Looking for a well qualified candidate from the L&D domain to manage the entire setup of Learning & Development at Uplers & Mavlers</div>
-                                            </div>
-                                            <div class="col-12 col-md-4 open-role-card_details">
-                                                <div>
-                                                    <div class="h6">1 Opening</div>
-                                                    <div class="mb-2 small">Remote | Full-Time</div>
-                                                </div>
 
-                                                <div>
-                                                        <button class="custom-btn" data-toggle="modal" data-target="#startScreeningModal">Apply</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="col-12 col-lg-6">
+                                <!-- Use the correct id for the video element -->
+                                <video id="userVideo" width="100%" height="auto" autoplay></video>
+                            </div>
 
+                            <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+
+                                <div class="d-flex  justify-content-between mb-3">
+                                    <div class="text-success">Difficulty:Easy</div>
+                                    <div>
+                                        Question <span id="questionCount"></span>
+
+                                    </div>
+                                </div>
+                                <!-- Question 1 -->
+                                <div id="question1" class="question">
+                                    <h5>Q1?</h5>
+                                    <!-- Timer for Question 1 -->
+                                    <div class="mt-2 mb-4">Timer <span id="timer1"></span></div>
+                                    <div>
+                                        <input type="radio" class="form-check-input" name="answer1" id="option1_1"
+                                            value="option1">
+                                        <label class="form-check-label" for="option1_1">Option 1</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="form-check-input" name="answer1" id="option1_2"
+                                            value="option2">
+                                        <label class="form-check-label" for="option1_2">Option 2</label>
+                                    </div>
+                                    <!-- Add more options as needed -->
+
+
+
+                                    <div class="mt-3">
+                                        <button type="button" class="btn btn-warning border-radius-20"
+                                            onclick="nextQuestion(2)">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div id="question2" class="question" style="display: none;">
+                                    <h5>Q2?</h5>
+
+                                    <!-- Timer for Question 2 -->
+                                    <div class="mt-2 mb-4">Timer <span id="timer2"></span></div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="answer2" id="option2_1"
+                                            value="option1">
+                                        <label class="form-check-label" for="option2_1">Option 1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="answer2" id="option2_2"
+                                            value="option2">
+                                        <label class="form-check-label" for="option2_2">Option 2</label>
+                                    </div>
+                                    <!-- Add more options as needed -->
+
+                                    
+
+                                    <div class="mt-3">
+                                        <button type="button" class="btn btn-warning border-radius-20"
+                                            onclick="previousQuestion(1)">Previous</button>
+                                        <button type="button" class="btn btn-warning border-radius-20"
+                                            onclick="nextQuestion(3)">Next</button>
+                                    </div>
+                                </div>
+
+
+                                <!-- Question 3 -->
+                                <div id="question3" class="question" style="display: none;">
+                                    <h5>Q3?</h5>
+                                    <!-- Timer for Question 3 -->
+                                    <div class="mt-2 mb-4">Timer <span id="timer3"></span></div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="answer3" id="option3_1"
+                                            value="option1">
+                                        <label class="form-check-label" for="option3_1">Option 1</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="answer3" id="option3_2"
+                                            value="option2">
+                                        <label class="form-check-label" for="option3_2">Option 2</label>
+                                    </div>
+                                    <!-- Add more options as needed -->
+
+                                 
+
+                                    <div class="mt-3">
+                                        <button type="button" class="btn btn-warning border-radius-20"
+                                            onclick="previousQuestion(2)">Previous</button>
+                                        <button type="button" class="btn btn-warning border-radius-20"
+                                            onclick="nextQuestion(4)">Next</button>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                      <!-- Question 4 -->
+      <div id="question4" class="question" style="display: none;">
+        <h5>Q4?</h5>
+        <!-- Timer for Question 4 -->
+        <div class="mt-2 mb-4">Timer <span id="timer4"></span></div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer4" id="option4_1" value="option1">
+            <label class="form-check-label" for="option4_1">Option 1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer4" id="option4_2" value="option2">
+            <label class="form-check-label" for="option4_2">Option 2</label>
+        </div>
+        <!-- Add more options as needed -->
+
+
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(3)">Previous</button>
+            <button type="button" class="btn btn-warning border-radius-20" onclick="nextQuestion(5)">Next</button>
+        </div>
+    </div>
+
+
+
+          <!-- Question 5 -->
+          <div id="question5" class="question" style="display: none;">
+            <h5>Q5?</h5>
+            <!-- Timer for Question 5 -->
+            <div class="mt-2 mb-4">Timer <span id="timer5"></span></div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="answer5" id="option5_1" value="option1">
+                <label class="form-check-label" for="option5_1">Option 1</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="answer5" id="option5_2" value="option2">
+                <label class="form-check-label" for="option5_2">Option 2</label>
+            </div>
+            <!-- Add more options as needed -->
+    
+          
+            <div class="mt-3">
+                <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(4)">Previous</button>
+                <button type="button" class="btn btn-warning border-radius-20" onclick="nextQuestion(6)">Next</button>
+            </div>
+        </div>
+
+
+
+
+             <!-- Question 6 -->
+      <div id="question6" class="question" style="display: none;">
+        <h6>Q6?</h6>
+        <!-- Timer for Question 6 -->
+        <div class="mt-2 mb-4">Timer <span id="timer6"></span></div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer6" id="option6_1" value="option1">
+            <label class="form-check-label" for="option6_1">Option 1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer6" id="option6_2" value="option2">
+            <label class="form-check-label" for="option6_2">Option 2</label>
+        </div>
+        <!-- Add more options as needed -->
+
+    
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(5)">Previous</button>
+            <button type="button" class="btn btn-warning border-radius-20" onclick="nextQuestion(7)">Next</button>
+        </div>
+    </div>
+
+
+
+
+
+       <!-- Question 7 -->
+       <div id="question7" class="question" style="display: none;">
+        <h7>Q7?</h7>
+        <!-- Timer for Question 7 -->
+        <div class="mt-2 mb-4">Timer <span id="timer7"></span></div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer7" id="option7_1" value="option1">
+            <label class="form-check-label" for="option7_1">Option 1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer7" id="option7_2" value="option2">
+            <label class="form-check-label" for="option7_2">Option 2</label>
+        </div>
+        <!-- Add more options as needed -->
+
+
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(6)">Previous</button>
+            <button type="button" class="btn btn-warning border-radius-20" onclick="nextQuestion(8)">Next</button>
+        </div>
+    </div>
+
+
+
+
+      <!-- Question 8 -->
+      <div id="question8" class="question" style="display: none;">
+        <h8>Q8?</h8>
+        <!-- Timer for Question 8 -->
+        <div class="mt-2 mb-4">Timer <span id="timer8"></span></div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer8" id="option8_1" value="option1">
+            <label class="form-check-label" for="option8_1">Option 1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer8" id="option8_2" value="option2">
+            <label class="form-check-label" for="option8_2">Option 2</label>
+        </div>
+        <!-- Add more options as needed -->
+
+
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(7)">Previous</button>
+            <button type="button" class="btn btn-warning border-radius-20" onclick="nextQuestion(9)">Next</button>
+        </div>
+    </div>
+
+
+          <!-- Question 9 -->
+          <div id="question9" class="question" style="display: none;">
+            <h9>Q9?</h9>
+            <!-- Timer for Question 9 -->
+            <div class="mt-2 mb-4">Timer <span id="timer9"></span></div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="answer9" id="option9_1" value="option1">
+                <label class="form-check-label" for="option9_1">Option 1</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="answer9" id="option9_2" value="option2">
+                <label class="form-check-label" for="option9_2">Option 2</label>
+            </div>
+            <!-- Add more options as needed -->
+    
+        
+    
+            <div class="mt-3">
+                <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(8)">Previous</button>
+                <button type="button" class="btn btn-warning border-radius-20" onclick="nextQuestion(10)">Next</button>
+            </div>
+        </div>
+
+
+
+              <!-- Question 10 -->
+      <div id="question10" class="question" style="display: none;">
+        <h10>Q10?</h10>
+        <!-- Timer for Question 10 -->
+        <div class="mt-2 mb-4">Timer <span id="timer10"></span></div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer10" id="option10_1" value="option1">
+            <label class="form-check-label" for="option10_1">Option 1</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" name="answer10" id="option10_2" value="option2">
+            <label class="form-check-label" for="option10_2">Option 2</label>
+        </div>
+        <!-- Add more options as needed -->
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-warning border-radius-20" onclick="previousQuestion(9)">Previous</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+                                <!-- Submit Button -->
+                                <div id="submitSection" style="display: none;">
+                                    <div class="mt-3">
+                                        <button type="button" class="btn btn-success border-radius-20"
+                                            onclick="submitInterview()">Submit</button>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <div class="col-12 mb-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-2">L&D</div>
-                                            <div>1 Open role (1 Opening)
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-12 col-md-8">
-                                                <h4 class="mb-2">Manager L&D</h4>
-                                                <div class="mb-2">Looking for a well qualified candidate from the L&D domain to manage the entire setup of Learning & Development at Uplers & Mavlers</div>
-                                            </div>
-                                            <div class="col-12 col-md-4 open-role-card_details">
-                                                <div>
-                                                    <div class="h6">1 Opening</div>
-                                                    <div class="mb-2 small">Remote | Full-Time</div>
-                                                </div>
-
-                                                <div>
-                                                    <button class="custom-btn" data-toggle="modal" data-target="#startScreeningModal">Apply</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
 
 
-
-                            <div class="col-12 mb-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-2">L&D</div>
-                                            <div>1 Open role (1 Opening)
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-12 col-md-8">
-                                                <h4 class="mb-2">Manager L&D</h4>
-                                                <div class="mb-2">Looking for a well qualified candidate from the L&D domain to manage the entire setup of Learning & Development at Uplers & Mavlers</div>
-                                            </div>
-                                            <div class="col-12 col-md-4 open-role-card_details">
-                                                <div>
-                                                    <div class="h6">1 Opening</div>
-                                                    <div class="mb-2 small">Remote | Full-Time</div>
-                                                </div>
-
-                                                <div>
-                                                    <button class="custom-btn" data-toggle="modal" data-target="#startScreeningModal">Apply</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-12 mb-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-2">L&D</div>
-                                            <div>1 Open role (1 Opening)
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-12 col-md-8">
-                                                <h4 class="mb-2">Manager L&D</h4>
-                                                <div class="mb-2">Looking for a well qualified candidate from the L&D domain to manage the entire setup of Learning & Development at Uplers & Mavlers</div>
-                                            </div>
-                                            <div class="col-12 col-md-4 open-role-card_details">
-                                                <div>
-                                                    <div class="h6">1 Opening</div>
-                                                    <div class="mb-2 small">Remote | Full-Time</div>
-                                                </div>
-
-                                                <div>
-                                                    <button class="custom-btn" data-toggle="modal" data-target="#startScreeningModal">Apply</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-12 mb-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-2">L&D</div>
-                                            <div>1 Open role (1 Opening)
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-12 col-md-8">
-                                                <h4 class="mb-2">Manager L&D</h4>
-                                                <div class="mb-2">Looking for a well qualified candidate from the L&D domain to manage the entire setup of Learning & Development at Uplers & Mavlers</div>
-                                            </div>
-                                            <div class="col-12 col-md-4 open-role-card_details">
-                                                <div>
-                                                    <div class="h6">1 Opening</div>
-                                                    <div class="mb-2 small">Remote | Full-Time</div>
-                                                </div>
-
-                                                <div>
-                                                    <button class="custom-btn" data-toggle="modal" data-target="#startScreeningModal">Apply</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            
                         </div>
-
-
-
-
-
-
-                    
                     </div>
                 </section>
-
-
-
-
-                
-
-
-
             </main>
-
-
-            <div class="modal fade" id="startScreeningModal" tabindex="-1" role="dialog" aria-labelledby="startScreeningModalLabel" aria-hidden="true">
-                <div class="modal-dialog open-positions-modal" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <div class="d-flex">
-                           <div class="mr-2">
-                            <img width="64" height="64" src="img/icon-ai_screening.svg" alt="">
-                           </div>
-                           <div>
-                            <div class="h6">AI Screening
-                            </div>
-                            <div class="d-flex flex-wrap">
-                                <div class="mr-2">Passing score benchmark: 66%
-                                </div>
-                                <div>Duration: 30 Mins</div>
-                            </div>
-                           </div>
-                      </div>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div>
-                        This screening will cover your communication skills as well as your technical skills for the role of ‘<b>Shopify Developer</b>’
-                      </div>
-
-
-                        <div>
-                            <div class="h5 mt-3">Important points to consider :
-                            </div>
-
-                            <ul>
-                                <li>It is a proctored screening, so please make sure that you do not change tabs or refresh while the screening is taking place.
-                                </li>
-                                <li>Please make sure your device isn’t connected to any other screens during this screening
-                                </li>
-                                <li>You won’t be allowed a retest so dont start it casually
-                                </li>
-                                <li>You will be marked as unqualified for this opportunity if any cheating is detected
-                                </li>
-                            </ul>
-
-                            <div>
-                                <a href="screening.html" class="btn custom-btn">Start Screening</a>
-                            </div>
-                            <div>Your test will open in another tab
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="modal-footer d-flex align-items-start">
-                        <div class="mr-2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2898 3.8602L1.81978 18.0002C1.64514 18.3026 1.55274 18.6455 1.55177 18.9947C1.55079 19.3439 1.64127 19.6873 1.8142 19.9907C1.98714 20.2941 2.2365 20.547 2.53748 20.7241C2.83847 20.9012 3.18058 20.9964 3.52978 21.0002H20.4698C20.819 20.9964 21.1611 20.9012 21.4621 20.7241C21.763 20.547 22.0124 20.2941 22.1853 19.9907C22.3583 19.6873 22.4488 19.3439 22.4478 18.9947C22.4468 18.6455 22.3544 18.3026 22.1798 18.0002L13.7098 3.8602C13.5315 3.56631 13.2805 3.32332 12.981 3.15469C12.6814 2.98605 12.3435 2.89746 11.9998 2.89746C11.656 2.89746 11.3181 2.98605 11.0186 3.15469C10.7191 3.32332 10.468 3.56631 10.2898 3.8602V3.8602Z" stroke="#B60707" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 9V13" stroke="#B60707" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 17H12.0105" stroke="#B60707" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                        </div>
-                      <div>The test will be regarded as a ‘failed attempt’ if you pause or leave in-between. If you have a genuine reason or a system/network issue, please take a screenshot or a short video as proof and contact your Uplers point of contact to request a re-test</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
 
 
 
@@ -886,66 +899,116 @@
         const year = new Date().getFullYear();
         document.querySelector(".copyright_year").textContent = year;
     </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/compressed.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/filter-multi-select-bundle.min.js"></script>
+
+
     <script>
-        $('#select1').filterMultiSelect({
-        // displayed when no options are selected
-        placeholderText: "Choose Category",
-
-        // placeholder for search field
-        filterText: "Filter",
-
-        // Select All text
-        selectAllText: "Select All",
-
-        // Label text
-        labelText: "",
-
-        // the number of items able to be selected
-        // 0 means no limit
-        selectionLimit: 0,
-
-        // determine if is case sensitive
-        caseSensitive: false,
-
-        // allows the user to disable and enable options programmatically
-        allowEnablingAndDisabling: true,
-
-        });  
-        
-        
 
 
+        let currentQuestion = 1;
+        const totalQuestions = 10; // Change this to the total number of questions
 
-        $('#select2').filterMultiSelect({
-        // displayed when no options are selected
-        placeholderText: "Choose Work Type",
 
-        // placeholder for search field
-        filterText: "Filter",
+        function startTimer(questionNumber) {
+            let timeInSeconds = 180; // 3 minutes
+            const timerElement = document.getElementById(`timer${questionNumber}`);
 
-        // Select All text
-        selectAllText: "Select All",
+            const timerInterval = setInterval(() => {
+                const minutes = Math.floor(timeInSeconds / 60);
+                const seconds = timeInSeconds % 60;
 
-        // Label text
-        labelText: "",
+                timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
-        // the number of items able to be selected
-        // 0 means no limit
-        selectionLimit: 0,
+                if (timeInSeconds === 0) {
+                    clearInterval(timerInterval);
+                    alert('Time is up! Exiting interview.');
+                    // Add code here to handle exiting the interview
+                } else {
+                    timeInSeconds--;
+                }
+            }, 1000);
+        }
 
-        // determine if is case sensitive
-        caseSensitive: false,
+        function nextQuestion(nextQuestionNumber) {
+            if (currentQuestion <= 10) {
+                // Hide the current question
+                document.getElementById(`question${currentQuestion}`).style.display = 'none';
 
-        // allows the user to disable and enable options programmatically
-        allowEnablingAndDisabling: true,
+                // Show the next question
+                document.getElementById(`question${nextQuestionNumber}`).style.display = 'block';
 
-        });
-</script>
+                // Start the timer for the next question
+                startTimer(nextQuestionNumber);
 
+                currentQuestion = nextQuestionNumber;
+                updateQuestionCount();
+
+            }
+
+            if (currentQuestion === 10) {
+                // If it's the last question, show the submit button
+                document.getElementById('submitSection').style.display = 'block';
+            }
+        }
+
+        function previousQuestion(previousQuestionNumber) {
+            if (currentQuestion > 1) {
+                // Hide the current question
+                document.getElementById(`question${currentQuestion}`).style.display = 'none';
+
+                // Show the previous question
+                document.getElementById(`question${previousQuestionNumber}`).style.display = 'block';
+
+                // Start the timer for the previous question
+                startTimer(previousQuestionNumber);
+
+                currentQuestion = previousQuestionNumber;
+                updateQuestionCount();
+
+            }
+        }
+
+        function submitInterview() {
+            // Add logic here to submit the interview
+            alert('Interview submitted!');
+             // Redirect to the home page after submission
+             window.location.href = 'index.html'; // Replace 'index.html' with the actual URL of your home page
+        }
+
+        function updateQuestionCount() {
+            const questionCountElement = document.getElementById('questionCount');
+            questionCountElement.textContent = `${currentQuestion}/${totalQuestions}`;
+        }
+
+        // Start with the first question
+        startTimer(1);
+        updateQuestionCount();
+
+
+        // Start with the first question
+        startCamera();
+
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    const userVideo = document.getElementById('userVideo');
+                    userVideo.srcObject = stream;
+                    userVideo.onloadedmetadata = function (e) {
+                        userVideo.play();
+                        startTimer(1);
+                    };
+                })
+                .catch(function (error) {
+                    console.error('Error accessing camera:', error);
+                });
+        }
+
+
+    </script>
 
 
 </body>
