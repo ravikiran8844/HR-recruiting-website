@@ -146,8 +146,16 @@ body{
         box-shadow: none;
         border-color: inherit;
     }
+    .btn-group .text-center{
+            text-align: left !important;
+    }
+    .btn-group .form-check{
+        padding-left: 0px !important;
+    }
 
-
+    .multiselect-container .multiselect-all .form-check{
+        padding: 0px !important;
+    }
     .multiselect-container.dropdown-menu{
         position: absolute;
         transform:unset !important;
@@ -155,6 +163,7 @@ body{
         height: auto;
         width: 100%;
         max-height: 250px;
-        overflow-y: scroll;
+        overflow: auto;
         z-index: 2 !important;
+        border-radius: 10px;
     }
