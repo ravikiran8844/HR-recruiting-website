@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Open Positions</title>
 
     <meta name="description" content="Some description for the page" />
@@ -967,7 +968,9 @@
         $(document).ready(function () {
             $('#select-job-category').multiselect({
                 includeSelectAllOption: true,
-                nonSelectedText: 'Choose Category'
+                nonSelectedText: 'Choose Category',
+                maxHeight: 250
+
 
 
             });
@@ -979,7 +982,9 @@
     $(document).ready(function () {
         $('#select2').multiselect({
                 includeSelectAllOption: true,
-                nonSelectedText: 'Choose Work Type'
+                nonSelectedText: 'Choose Work Type',
+                maxHeight: 250
+
         });
     });
 </script>

@@ -156,14 +156,22 @@ body{
     .multiselect-container .multiselect-all .form-check{
         padding: 0px !important;
     }
-    .multiselect-container.dropdown-menu{
+    .multiselect-container.dropdown-menu {
         position: absolute;
-        transform:unset !important;
-        top: 50px !important;
-        height: auto;
+        transform: unset !important;
+        top: 55px !important;
         width: 100%;
-        max-height: 250px;
-        overflow: auto;
-        z-index: 2 !important;
         border-radius: 10px;
     }
+    
+   
+
+
+    button.multiselect-option.dropdown-item {
+        pointer-events:none;
+        }
+      
+      span.form-check input,
+      span.form-check label  {
+        pointer-events: all;
+      }
