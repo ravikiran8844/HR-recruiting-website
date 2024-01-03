@@ -68,10 +68,10 @@ body{
     background: #ffda30;
     color: #000;
     margin: auto 0px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     width: fit-content;
@@ -129,4 +129,20 @@ body{
 
     input[type=checkbox], input[type=radio]{
         display: none;
+    }
+
+
+
+    .multiselect-native-select .btn-group{
+        width: 100%;
+    }
+
+    .custom-select{
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .custom-select:focus{
+        box-shadow: none;
+        border-color: inherit;
     }
