@@ -17437,7 +17437,6 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 }
 .flexslider video{
 	width: 100%;
-	height: 100%;
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }
@@ -17556,3 +17555,55 @@ select.country_to_state.country_select.form-control.select2-hidden-accessible.ch
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay-form_wrapper {
+	position: relative;
+	max-width: 400px;
+	margin: auto;
+	padding: 30px 0px;
+	width: 100%;
+	border-radius: 20px;
+  }  
+
+
+  .overlay-form_wrapper input,  .overlay-form_wrapper textarea{
+    border: none;
+	border: 1px solid #fff !important;
+	border-radius: 20px;
+	margin: 10px 0px;
+  }
+  
+  /* .overlay-form_wrapper input::placeholder,  .overlay-form_wrapper textarea::placeholder{
+    color: #000 !important;
+  }
+   */
+
+  .overlay-form_wrapper textarea{
+	height: 180px;
+  }
+@media (min-width: 1199px) {
+ .page_slider .intro_layers_wrapper{
+        top: 0px !important;
+      } 
+
+	  .page_slider .intro_layers_wrapper {
+		display: flex;
+		align-items: center;
+}
+
+	}
+
+
+	
